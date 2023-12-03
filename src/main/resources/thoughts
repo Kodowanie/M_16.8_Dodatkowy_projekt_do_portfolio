@@ -1,0 +1,36 @@
+v.1.
+- create board (use swing or UI swing designer?)
+- create grid
+    - how to create free space (right, left, south) so the grid dont take all of the frame size
+- create grid generator
+    - user can chose how many numbers will be filled (no min. number)
+    - need to take into account row, column and box number for duplicate
+        - 3 methods for checking legal number
+            - by row
+            - by column
+            - by box 3x3
+        - if random generated number is duplicate it need to be generated again
+        - method can be universal since probably it will be use into "sudoku solver method"
+- sudoku solver
+    - how to create a method that solve sudoku
+    - recursion needed (how to implement?)
+- add buttons
+    - to select select how much of the grid will be field (no min.)
+    - start "sudoku solver"
+- optional add complexity notification
+    - if so much sudoku solver method iteration then so and so
+        - 0<50 iteration easy
+        - 50<150 iteration medium
+        - 150<... iteration hard
+
+v.2
+- how to create valid sudoku board every time
+    - v.1 sudoku board over 24 had issue that game could become non possible to resolve
+        - possible solution generate around 10 number to make the board different every time
+        - launch SudokuSolver.solveBoard()
+        - remove X amount of digits from the board(board will be solvable every time)
+- add buttons easy, medium, hard (depending on how many digit are present on the board)
+    - easy 38 - minus 42
+    - medium 32 - minus 48
+    - hard 26 - minus 54
+- optional add count iteration final SudokuSolver.solveBoard()
